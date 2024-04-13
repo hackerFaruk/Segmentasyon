@@ -4,4 +4,8 @@
 .config/
 .cache/
 .bash_history
-Source/Dataset_version3
+Source/Dataset_version3/input_data_npy_new
+Source/Dataset_version3/input_data_splitted_new
+Source/Dataset_version3/mask
+Source/Dataset_version3/original
+Source/Dataset_version3/results
