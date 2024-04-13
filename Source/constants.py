@@ -4,7 +4,7 @@
 
 """
 
-DATASET_PATH  = "/home/onuralp/projects/Segmentasyon/Source/Dataset"
+DATASET_PATH  = ""
 DATASET       = DATASET_PATH+'Dataset_version3/'
 ANNOTIONS     = "The loss function is dice and focal loss. Class imbalance ratio were checked, the images which has less than 5% class imbalance ratio were removed.The images were resized by (256x256).1034 images which had big covid area were augmented to 7238 images (1034*7=7238) [covid images] + 7238 (1034*7) [noncovid images]. Train, valitadion ratio are .80 and .20, respectively. Data augmentation process was applied only intensity-based. Dataset is used for covid segmentation."#"Data augmentation is applied to the dataset.  The images are not cropped, but they are only resized by 256. Dataset has training, validation and test ratio, .68,.17, .15, respectively. This dataset is used for lung segmentation. The loss function is dice  and focal loss.The model is ResUnet"  #Please write the annotions on each training
 

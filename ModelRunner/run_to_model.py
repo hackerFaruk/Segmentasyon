@@ -15,11 +15,11 @@ def iou_score(y_true, y_pred):
 
 # Modeli yükleme sırasında özel metrik fonksiyonları tanımlama
 with tf.keras.utils.custom_object_scope({'dice_coef': dice_coef, 'iou_score': iou_score}):
-    model_path = '/content/drive/MyDrive/ImageAI/best_model2.hdf5'
+    model_path = 'best_model.hdf5'
     model = tf.keras.models.load_model(model_path)
 
 # Giriş resmini uygun boyuta getirme
-input_image_path = '/content/drive/MyDrive/ImageAI/original/004.jpg'
+input_image_path = '002.jpg'
 input_image = cv2.imread(input_image_path, cv2.IMREAD_GRAYSCALE)
 input_image = cv2.resize(input_image, (256, 256))  # Giriş boyutunu (256, 256) olarak yeniden boyutlandırma
 input_image = np.expand_dims(input_image, axis=-1)  # Tek bir kanal ekleyerek (256, 256) boyutunu (256, 256, 1) olarak genişletiyoruz

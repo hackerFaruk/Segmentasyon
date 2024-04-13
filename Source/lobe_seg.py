@@ -85,7 +85,11 @@ tf.random.set_seed(SEED_NUMBER)
 # tf.compat.v1.debugging.set_log_device_placement(True)         
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 print("GPU: {}, CPU: {}".format(tf.config.list_physical_devices('GPU'),tf.config.list_physical_devices('CPU')))
-tf.config.run_functions_eagerly(True)
+
+#no more supported
+#tf.config.run_functions_eagerly(True)
+tf.config.experimental_run_functions_eagerly(True)
+
 
 def dice_coef(y_true, y_pred, smooth=1):
       
