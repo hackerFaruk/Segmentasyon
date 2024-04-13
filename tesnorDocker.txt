@@ -1,0 +1,46 @@
+ docker pull tensorflow/tensorflow:latest  # Download latest stable image
+ docker run -it -p 8888:8888 tensorflow/tensorflow:latest-jupyter  # Start Jupyter server 
+
+
+
+
+use to launch
+
+ "docker" "run" "-u" "root" "--name" "tensorman-SPNET" "--gpus=all" "-e" "HOME=/project" "-it" "--rm" "-v" "/home/shawley/SPNet:/project" "-w" "/project" "tensorflow/tensorflow:latest-gpu-py3" "bash"
+
+
+
+
+#tensorman run --gpu python ./tesnortest.py
+
+
+
+RUN apt-get update && apt-get install -y python3-opencv
+RUN pip install opencv-python
+
+
+apt-get update && apt-get install ffmpeg libsm6 libxext6  -y
+
+
+
+ apt-get update && apt-get install -y python3-opencv
+ pip install opencv-python
+
+
+
+
+ currentl go into segmentation folder use 
+
+create 
+ tensorman run --gpu --python3 --root --name custom_name bash
+
+
+ Once you've made the changes needed, open another terminal and save it as a new image:
+
+tensorman save CONTAINER_NAME IMAGE_NAME
+
+
+Running the custom image
+You should then be able to specify that container with Tensorman, like so:
+
+tensorman =IMAGE_NAME run --gpu bash
